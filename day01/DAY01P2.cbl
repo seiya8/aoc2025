@@ -44,22 +44,20 @@
        200-MAIN.
            MOVE IN-DIS TO WK-DIS.
            IF IN-DIR = "R"
-             THEN
                MOVE -1 TO WK-DIR-SIGN
-             ELSE
+           ELSE
                MOVE 1 TO WK-DIR-SIGN
            END-IF.
       * COMPUTE MINIMUM DISTANCE TO ORIGIN
            COMPUTE WK-DIS-TO-ORG = WK-DIR-SIGN * WK-POS + 100.
            COMPUTE WK-DIS-TO-ORG = FUNCTION MOD(WK-DIS-TO-ORG 100).
            IF WK-DIS-TO-ORG = 0
-             THEN
                MOVE 100 TO WK-DIS-TO-ORG
            END-IF.
       * ADD TIMES OF ZERO-CROSSING TO PASSWORD
            IF WK-DIS >= WK-DIS-TO-ORG
-             THEN
-             COMPUTE WK-PWD = WK-PWD + (WK-DIS - WK-DIS-TO-ORG)/100 + 1
+               COMPUTE WK-PWD
+                 = WK-PWD + (WK-DIS - WK-DIS-TO-ORG) / 100 + 1
            END-IF.
       * UPDATE POSITION
            COMPUTE WK-POS

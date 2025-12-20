@@ -53,7 +53,6 @@
                      = FUNCTION ABS(1 + WK-X(WK-I) - WK-X(WK-J))
                        * FUNCTION ABS(1 + WK-Y(WK-I) - WK-Y(WK-J))
                    IF WK-SIZE > WK-ANS
-                     THEN
                        MOVE WK-SIZE TO WK-ANS
                    END-IF
                END-PERFORM

@@ -45,7 +45,6 @@
            MOVE IN-DIS TO WK-DIS.
       * CONSIDER LEFT ROTATION AS RIGHT ROTATION
            IF IN-DIR = "L"
-             THEN
                COMPUTE WK-DIS = 1000 - WK-DIS
            END-IF.
       * UPDATE POSITION
@@ -53,7 +52,6 @@
            COMPUTE WK-POS = FUNCTION MOD(WK-POS 100).
       * INCREMENT PASSWORD
            IF WK-POS = ZERO
-             THEN
                ADD 1 TO WK-PWD
            END-IF.
       * READ NEXT LINE

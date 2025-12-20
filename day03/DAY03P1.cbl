@@ -52,7 +52,6 @@
                PERFORM VARYING WK-J FROM WK-POS BY 1
                  UNTIL WK-J > 100 - (CON-DIGIT - WK-I)
                    IF IN-RECORD(WK-J:1) > WK-MAX-CHR
-                     THEN
                        MOVE IN-RECORD(WK-J:1) TO WK-MAX-CHR
                        MOVE WK-J TO WK-POS
                    END-IF

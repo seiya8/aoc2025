@@ -68,11 +68,9 @@
            PERFORM VARYING WK-I FROM 2 BY 1 UNTIL WK-I > 141
                PERFORM VARYING WK-J FROM 2 BY 1 UNTIL WK-J > 141
                    IF WK-ROW(WK-I)(WK-J:1) = "@"
-                     THEN
                        MOVE ZERO TO WK-CNT
                        PERFORM 210-CHECK
                        IF WK-CNT < 4
-                         THEN
                            ADD 1 TO WK-ANS
                        END-IF    
                    END-IF
@@ -85,7 +83,6 @@
        210-CHECK.
            PERFORM VARYING WK-K FROM 1 BY 1 UNTIL WK-K > 8
                IF WK-ROW(WK-I+DIR-I(WK-K))(WK-J+DIR-J(WK-K):1) = "@"
-                 THEN
                    ADD 1 TO WK-CNT
                END-IF
            END-PERFORM.
