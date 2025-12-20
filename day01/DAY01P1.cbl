@@ -31,7 +31,7 @@
       * INITIALIZATION PROCESS                                         *
       ******************************************************************
        100-INIT.
-      * FILE OPEN
+      * OPEN FILE
            OPEN INPUT INPUT-FILE.
       * READ FIRST LINE
            READ INPUT-FILE
