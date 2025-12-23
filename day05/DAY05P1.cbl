@@ -59,7 +59,7 @@
                  AT END
                    MOVE "1" TO WK-EOD
                  NOT AT END
-      * CHECK FOR ALL THE VALID RANGES
+      * CHECK FOR ALL THE FRESH ID RANGES
                    PERFORM VARYING WK-I FROM 1 BY 1
                      UNTIL WK-I > WK-N-RANGE
                        MOVE IN-RECORD TO WK-ID
